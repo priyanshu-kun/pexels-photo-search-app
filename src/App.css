@@ -1,38 +1,94 @@
+body {
+  padding: 0;
+  margin: 0;
+  /* background: #333333; */
+}
+
 .App {
+  /* background-color: rebeccapurple; */
+  padding-top: 10vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  display: inline-block;
+  position: relative;
+  /* background-color: red; */
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input {
+  padding: 15px;
+  width: 30vw;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 99999px;
+  outline: none;
+  transition: all 0.2s linear;
+  /* background: transparent; */
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form input:focus {
+  box-shadow: 0 0 0 3px rgb(255, 69, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0);
+  /* border-radius: 5px; */
 }
 
-.App-link {
-  color: #61dafb;
+
+
+form button {
+  position: absolute;
+  top: 50%;
+  right: 1.5%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 99999px;
+  background: orange;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  /* box-shadow: inset 0 0 20px 5px rgb(255, 69, 0, 0.2); */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form button:hover {
+  opacity: 0.6;
+}
+
+.main-heading {
+  position: absolute;
+  font-size: 5rem;
+  opacity: 0.1;
+  text-transform: uppercase;
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.main-heading span {
+  color: orangered;
+}
+
+.photos-grid {
+  background: red;
+  /* margin-top: 5vh; */
+  width: 80%;
+  margin: 5vh auto 0 auto;
+  /* height: 100vh; */
+  background: transparent;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  /* background: red; */
+}
+
+.photos-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
